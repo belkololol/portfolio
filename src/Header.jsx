@@ -3,7 +3,6 @@ import './App.css';
 import HomePage from "./ HomePage";
 import {Switch, Route, Link} from 'react-router-dom'
 import MyProjects from "./MyProjects";
-import ThemeSwitch from "./ThemeSwitch";
 
 class Header extends React.Component {
     constructor(props) {
@@ -57,14 +56,14 @@ class Header extends React.Component {
                 </div>
                 <div className={`${this.state.isHidden ? null : "active"} container `}>
                     <Switch>
-                        <Route exact path='/' render={() => <HomePage toggleTheme={this.props.toggleTheme}
+                        <Route exact path='/portfolio' render={() => <HomePage toggleTheme={this.props.toggleTheme}
                                                                       hidden={this.state.isHidden}/>}/>
                         <Route path='/projects'
                                render={() => <MyProjects theme={this.props.theme} toggleTheme={this.props.toggleTheme}
                                                          hidden={this.state.isHidden}/>}/>
                     </Switch>
                 </div>
-                <Link to={this.state.isProject ? "/" : "/projects"}>
+                <Link to={this.state.isProject ? "/portfolio" : "/projects"}>
                     <button className="viewProjectsBtn" onClick={this.toggleButton}>
                         {this.state.isProject ? "Главная" : "Посмотреть проекты"}
                     </button>
