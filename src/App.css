@@ -956,12 +956,21 @@ body {
 }
 
 @media (orientation: landscape) {
-    .dark.active, .light.active {
+    .container.active, .container.active {
         opacity: 0;
     }
-    .App:before, .App:before {
+    .dark:after {
         content: "Сайт не работает в альбомной ориентации";
         color: #ffffff;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .light:after {
+        content: "Сайт не работает в альбомной ориентации";
+        color: #2c2a2a;
         font-size: 20px;
         position: absolute;
         top: 50%;
