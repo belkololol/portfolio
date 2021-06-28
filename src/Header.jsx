@@ -56,7 +56,7 @@ class Header extends React.Component {
                 </div>
                 <div className={`${this.state.isHidden ? null : "active"} container `}>
                     <Switch>
-                        <Route exact path='/portfolio' render={() => <HomePage toggleTheme={this.props.toggleTheme}
+                        <Route path='/portfolio' render={() => <HomePage toggleTheme={this.props.toggleTheme}
                                                                       hidden={this.state.isHidden}/>}/>
                         <Route path='/projects'
                                render={() => <MyProjects theme={this.props.theme} toggleTheme={this.props.toggleTheme}
