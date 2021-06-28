@@ -859,7 +859,7 @@ body {
 }
 
 
-@media handheld  and (max-height: 820px) {
+@media (max-height: 820px) {
     .toggleThemeContainer {
         right: -15px;
     }
@@ -873,7 +873,7 @@ body {
     }
 }
 
-@media handheld  and (max-height: 740px) {
+@media (max-height: 740px) {
     .toggleThemeContainer {
         right: 0px;
     }
@@ -887,7 +887,7 @@ body {
     }
 }
 
-@media handheld  and (max-height: 670px) {
+@media (max-height: 670px) {
     .toggleThemeContainer {
         right: -15px;
     }
@@ -901,7 +901,7 @@ body {
     }
 }
 
-@media handheld  and (max-height: 570px) {
+@media (max-height: 570px) {
     .myProjectsContainer {
         margin-top: 20px;
     }
@@ -940,15 +940,22 @@ body {
         font-size: 11px;
     }
     .skillContainer p {
-        font-size: 11px;
+        font-size: 10px;
     }
     .viewProjectsBtn {
         font-size: 11px;
         padding: 8px;
     }
+    .toggleThemeBtn {
+        width: 25px;
+        height: 25px;
+    }
+    .container {
+        padding: 20px 0 0 0;
+    }
 }
 
-@media handheld and (orientation: landscape) {
+@media (max-width: 450px) and (orientation: landscape) {
     html {
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
